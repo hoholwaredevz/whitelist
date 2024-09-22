@@ -361,7 +361,7 @@ function killplayer(Hit,Pos,Dmg)
 	local a11 = 0 --ne trogat
 	local a12 = Vector3.new()--vector blat ne trog
 	local a13 = false --eche odna ebychaa proverka
-	game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("HitPart"):FireServer(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
+	game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("HitPart"):FireServer(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13,  nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 end
 local ticking, tickingft, tickingbt = tick(), tick(), tick()
 game:GetService("RunService").Heartbeat:Connect(function(step)
@@ -463,7 +463,6 @@ game:GetService("RunService").Heartbeat:Connect(function(step)
 					end
 				killplayer(Hit,Pos,Dmg)
 			end 
-				game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("HitPart"):FireServer(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 				ticking = tick()
 			end
 			end
